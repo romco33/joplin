@@ -9,6 +9,7 @@ import OpenAiCompatibleProvider from './providers/OpenAiCompatible';
 import AnthropicProvider from './providers/Anthropic';
 import JoplinCloudProvider from './providers/JoplinCloud';
 import TestProvider from './providers/TestProvider';
+import { _() } from '../../locale'; 
 
 const logger = Logger.create('AiService');
 
