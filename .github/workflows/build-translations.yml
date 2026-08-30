@@ -23,7 +23,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          ref: update-translations
+          ref: dev
           fetch-depth: 0
 
       - name: Setup Node.js
@@ -86,6 +86,6 @@ jobs:
             1. Review the changes
             2. Upload the updated `.pot` and `.po` files to Crowdin for translation
             3. Merge this PR once translations are confirmed
-          branch: update-translations
+          branch: dev
           base: dev
           delete-branch: false
