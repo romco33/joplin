@@ -1461,12 +1461,12 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 				const pluginSupportEnabled = settings['plugins.pluginSupportEnabled'];
 				return !!pluginSupportEnabled;
 			},
-			label: () => 'Development plugins',
+			label: () => _('Development plugins'),
 			description: () => {
 				if (shim.mobilePlatform()) {
-					return 'The path to a plugin\'s development directory. When the plugin is rebuilt, Joplin reloads the plugin automatically.';
+					return _('The path to a plugin\'s development directory. When the plugin is rebuilt, Joplin reloads the plugin automatically.');
 				} else {
-					return 'You may add multiple plugin paths, each separated by a comma. You will need to restart the application for the changes to take effect.';
+					return _('You may add multiple plugin paths, each separated by a comma. You will need to restart the application for the changes to take effect.');
 				}
 			},
 			storage: SettingStorage.File,
@@ -1789,7 +1789,7 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 			label: () => _('Custom stylesheet for Joplin-wide app styles'),
 			section: 'appearance',
 			advanced: true,
-			description: () => 'CSS file support is provided for your convenience, but they are advanced settings, and styles you define may break from one version to the next. If you want to use them, please know that it might require regular development work from you to keep them working. The Joplin team cannot make a commitment to keep the application HTML structure stable.',
+			description: () => _('CSS file support is provided for your convenience, but they are advanced settings, and styles you define may break from one version to the next. If you want to use them, please know that it might require regular development work from you to keep them working. The Joplin team cannot make a commitment to keep the application HTML structure stable.'),
 			storage: SettingStorage.File,
 			isGlobal: true,
 		},
@@ -1802,7 +1802,7 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 			label: () => _('Re-upload local data to sync target'),
 			section: 'sync',
 			advanced: true,
-			description: () => 'If the data on the sync target is incorrect or empty, you can use this button to force a re-upload of your data to the sync target. Application will have to be restarted',
+			description: () => _('If the data on the sync target is incorrect or empty, you can use this button to force a re-upload of your data to the sync target. Application will have to be restarted'),
 		},
 
 		'sync.clearLocalDataButton': {
@@ -1813,7 +1813,7 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 			label: () => _('Delete local data and re-download from sync target'),
 			section: 'sync',
 			advanced: true,
-			description: () => 'If the data on the sync target is correct but your local data is not, you can use this button to clear your local data and force re-downloading everything from the sync target. As your local data will be deleted first, it is recommended to export your data as JEX first. Application will have to be restarted',
+			description: () => _('If the data on the sync target is correct but your local data is not, you can use this button to clear your local data and force re-downloading everything from the sync target. As your local data will be deleted first, it is recommended to export your data as JEX first. Application will have to be restarted'),
 		},
 
 
@@ -1826,8 +1826,8 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 			type: SettingItemType.Bool,
 			public: true,
 			appTypes: [AppType.Desktop],
-			label: () => 'Automatically upload crash reports',
-			description: () => 'If you experience a crash, please enable this option to automatically send crash reports. You will need to restart the application for this change to take effect.',
+			label: () => _('Automatically upload crash reports'),
+			description: () => _('If you experience a crash, please enable this option to automatically send crash reports. You will need to restart the application for this change to take effect.'),
 			isGlobal: true,
 			storage: SettingStorage.File,
 		},
@@ -2333,8 +2333,8 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 			public: true,
 			storage: SettingStorage.File,
 			appTypes: [AppType.Desktop],
-			label: () => 'Enable keychain support',
-			description: () => 'This is an experimental setting to enable keychain support on Linux',
+			label: () => _('Enable keychain support'),
+			description: () => _('This is an experimental setting to enable keychain support on Linux'),
 			show: () => shim.isLinux(),
 			section: 'general',
 			isGlobal: true,
@@ -2372,8 +2372,8 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 			public: true,
 			storage: SettingStorage.File,
 			appTypes: [AppType.Desktop],
-			label: () => 'Security: Stronger security controls in the Rich Text Editor',
-			description: () => 'Improves Rich Text Editor security by applying a strict content security policy to the Rich Text Editor\'s content.',
+			label: () => _('Security: Stronger security controls in the Rich Text Editor'),
+			description: () => _('Improves Rich Text Editor security by applying a strict content security policy to the Rich Text Editor\'s content.'),
 			section: 'note',
 			isGlobal: true,
 		},
@@ -2384,8 +2384,8 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 			public: true,
 			storage: SettingStorage.File,
 			appTypes: [AppType.Desktop],
-			label: () => 'Security: Improve plugin panel, editor, and dialog security',
-			description: () => 'Improves the security of plugin WebViews. This may break some plugins.',
+			label: () => _('Security: Improve plugin panel, editor, and dialog security'),
+			description: () => _('Improves the security of plugin WebViews. This may break some plugins.'),
 			section: 'note',
 			isGlobal: true,
 		},
@@ -2396,8 +2396,8 @@ const builtInMetadata = (Setting: typeof SettingType) => {
 			public: true,
 			storage: SettingStorage.File,
 			appTypes: [AppType.Desktop],
-			label: () => 'Include semantic search results in the search panel',
-			description: () => 'Allows using semantic search from the search panel',
+			label: () => _('Include semantic search results in the search panel'),
+			description: () => _('Allows using semantic search from the search panel'),
 			section: 'general',
 			isGlobal: true,
 			advanced: true,
